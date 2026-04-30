@@ -18,6 +18,15 @@ if (contactForm) {
     tempLink.click();
     document.body.removeChild(tempLink);
 
+    // Display the success alert
+    const alertBox = document.getElementById('alert-message');
+    alertBox.style.display = 'block';
+
+    // Hide the alert after 5 seconds
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 5000);
+
     // Keep a fallback in case the mailto does not open immediately.
     setTimeout(() => {
       window.location.href = mailto;
@@ -58,6 +67,10 @@ const revealGroups = [
   { selector: '.mission-text', direction: 'reveal-right' },
   { selector: '.offer', direction: 'reveal-left' },
   { selector: '.service-image', direction: 'reveal-right' },
+  { selector: '.why-card', direction: 'reveal-left' },
+  { selector: '.step-card', direction: 'reveal-right' },
+  { selector: '.team-card', direction: 'reveal-left' },
+  { selector: '.faq-card', direction: 'reveal-right' },
   { selector: '.review h3', direction: '' },
   { selector: '.review-item', direction: '' },
   { selector: '.contact', direction: 'reveal-left' },

@@ -146,6 +146,26 @@
         line-height: 1.6;
       }
 
+      .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 24px;
+        padding: 0.95rem 1.6rem;
+        border-radius: 999px;
+        background-color: #b8955f;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        transition: transform 0.25s ease, background-color 0.25s ease;
+      }
+
+      .hero-cta:hover,
+      .hero-cta:focus-visible {
+        background-color: #9b7b50;
+        transform: translateY(-2px);
+      }
+
       .carousel-wrapper {
         flex: 0 0 40%;
         max-width: 40%;
@@ -304,7 +324,182 @@
         transition: 0.5s;
         filter: brightness(1.08) saturate(1.08);
       }
+
+      .why-choose,
+      .how-it-works,
+      .team,
+      .faq {
+        padding: 4rem 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-intro h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-intro p {
+        color: #3b3b3b;
+        line-height: 1.75;
+      }
+
+      .why-grid,
+      .steps-grid,
       
+      .faq-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        align-items: stretch;
+      }
+
+      .team-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+          align-items: center;
+          width: 100%;
+      }
+
+      .team-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .team-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+      }
+
+      .team-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2rem;
+      }
+
+      .team-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+      }
+
+      .team-text p {
+        line-height: 1.6;
+        color: #3b3b3b;
+      }
+
+      .why-card,
+      .step-card,
+      
+      .faq-card {
+        background-color: #ffffff;
+        padding: 1.8rem;
+        border-radius: 16px;
+        border: 1px solid rgba(184, 149, 95, 0.15);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+      }
+
+      .why-card h4,
+      .step-card h4,
+      .faq-card h4 {
+        margin-bottom: 0.75rem;
+        color: #111;
+      }
+
+      .why-card p,
+      .step-card p,
+      .faq-card p {
+        color: #444;
+        line-height: 1.6;
+      }
+
+      .step-card span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: #b8955f;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .team-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+      }
+
+      .faq-card details {
+        cursor: pointer;
+      }
+
+      .faq-card summary {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        list-style: none;
+      }
+
+      .faq-card summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-card summary::before {
+        content: "+";
+        display: inline-block;
+        width: 1rem;
+        margin-right: 0.75rem;
+        color: #b8955f;
+      }
+
+      .faq-card details[open] summary::before {
+        content: "-";
+      }
+
+      .faq-card p {
+        margin: 0;
+        color: #444;
+        line-height: 1.7;
+      }
+
+      .why-card:hover,
+      .step-card:hover,
+      .team-card:hover,
+      .faq-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .team-card:hover img {
+        transform: scale(1.03);
+      }
+
+      .team-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        transition: transform 0.35s ease;
+      }
+
       .review {
         width: 100%;
         padding: 40px 16px;
@@ -424,6 +619,33 @@
       .form button:hover {
         background-color: #a37f52;
         transform: translateY(-1px);
+      }
+
+      .alert-box {
+        margin-top: 15px;
+        padding: 12px 16px;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        border-radius: 4px;
+        color: #155724;
+        font-weight: 500;
+        text-align: center;
+        animation: slideIn 0.3s ease-out;
+      }
+
+      .alert-box p {
+        margin: 0;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .office h4,
@@ -683,6 +905,25 @@
           padding: 0.4rem 0.8rem;
           font-size: 0.9rem;
         }
+
+        .team,
+        .faq {
+          padding: 2rem 1.5rem;
+        }
+
+        .team-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .team-text {
+          padding: 0;
+          margin-top: 1rem;
+        }
+
+        .team-text h3 {
+          font-size: 1.5rem;
+        }
       }
 
       /* Tablets (481px to 768px) */
@@ -834,6 +1075,24 @@
           padding-bottom: 1.5rem;
           margin-top: 0.5rem;
         }
+
+        .team,
+        .faq {
+          padding: 2.5rem 2rem;
+        }
+
+        .team-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .team-text {
+          padding: 0;
+        }
+
+        .team-text h3 {
+          font-size: 1.6rem;
+        }
       }
 
       /* Small Laptops (769px to 992px) */
@@ -919,6 +1178,15 @@
         .form {
           flex: 1 1 100%;
         }
+
+        .team-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .team-text {
+          padding: 1rem;
+        }
       }
 
       /* Large Screens (1200px and above) */
@@ -933,6 +1201,20 @@
 
         nav {
           justify-content: space-around;
+        }
+
+        .team,
+        .faq {
+          padding: 4rem 3rem;
+        }
+
+        .team-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+        }
+
+        .team-text {
+          padding: 0 2rem;
         }
       }
     
